@@ -1,8 +1,9 @@
-package Repositories;
+package com.resultsDeclaration.Repositories;
 
-import Entities.Result;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.resultsDeclaration.Entities.Result;
 
 import java.util.List;
 

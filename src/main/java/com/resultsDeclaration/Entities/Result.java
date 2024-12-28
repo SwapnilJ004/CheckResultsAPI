@@ -1,9 +1,9 @@
-package Entities;
+package com.resultsDeclaration.Entities;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "result")
+@Table(name = "results")
 public class Result {
 
     @Id

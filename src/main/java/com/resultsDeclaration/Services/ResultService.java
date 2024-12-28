@@ -1,8 +1,9 @@
-package Services;
-import Repositories.ResultRepository;
-import Entities.Result;
+package com.resultsDeclaration.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.resultsDeclaration.Entities.Result;
+import com.resultsDeclaration.Repositories.ResultRepository;
 
 import java.util.List;
 
