@@ -13,7 +13,7 @@ public class ResultService {
     @Autowired
     private ResultRepository resultRepository;
 
-    public List<Result> getResultsByVotingId(int votingId) {
-        return resultRepository.findByVotingId(votingId);
+    public List<Result> getResultsByElectionId(int votingId) {
+        return resultRepository.findByElectionId(votingId);
     }
 }

@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface ResultRepository extends JpaRepository<Result, Integer> {
-    List<Result> findByVotingId(int votingId);
+    List<Result> findByElectionId(int electionId);
 }
