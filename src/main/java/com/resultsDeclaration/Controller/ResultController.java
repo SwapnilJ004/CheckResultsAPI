@@ -14,7 +14,7 @@ public class ResultController {
     private ResultService resultService;
 
     @GetMapping("/results/{electionId}")
-    public ResponseEntity<List<Result>> getResultsByVotingId(@PathVariable int electionId) {
+    public ResponseEntity<List<Result>> getResultsByElectionId(@PathVariable int electionId) {
         List<Result> results = resultService.getResultsByElectionId(electionId);
         if (results.isEmpty()) {
             return ResponseEntity.noContent().build();

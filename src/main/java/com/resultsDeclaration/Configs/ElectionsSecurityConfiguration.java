@@ -37,7 +37,7 @@ public class ElectionsSecurityConfiguration {
 	SecurityFilterChain securityFilter(HttpSecurity http) throws Exception {
 		http.cors().and().authorizeHttpRequests((req) -> req
 
-				.requestMatchers("/elections", "/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**").permitAll() // Allow
+				.requestMatchers("/results/**", "/swagger-ui.html", "/swagger-ui/**", "/swagger-ui/index.html", "/v3/api-docs/**").permitAll() // Allow
 				.anyRequest().authenticated())
 				.httpBasic(withDefaults())
 				.formLogin(withDefaults());
