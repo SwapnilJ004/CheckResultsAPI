@@ -1,10 +1,10 @@
 package com.resultsDeclaration.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.resultsDeclaration.Entities.EpollUsers;
+import com.resultsDeclaration.Entities.EpollUser;
 
-public interface UsersRepository extends JpaRepository<EpollUsers, Integer> {
+public interface UsersRepository extends JpaRepository<EpollUser, Integer> {
 
-    EpollUsers findByEmail(String email);
+    EpollUser findByEmail(String email);
 
 }

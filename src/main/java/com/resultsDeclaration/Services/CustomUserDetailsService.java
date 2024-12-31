@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.resultsDeclaration.Entities.EpollUsers;
+import com.resultsDeclaration.Entities.EpollUser;
 import com.resultsDeclaration.Repositories.UsersRepository;
 
 @Service
@@ -18,7 +18,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		
-		EpollUsers user = repo.findByEmail(email);
+		EpollUser user = repo.findByEmail(email);
 		
 		if(user == null) throw new UsernameNotFoundException("No User Found");
 		
