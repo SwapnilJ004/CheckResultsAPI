@@ -15,10 +15,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.Data;
 
 @Entity
-@Data
 @Table(name = "epoll_users")
 public class EpollUser {
     @Id
@@ -109,4 +107,172 @@ public class EpollUser {
     @Column(name = "facebook")
     private String facebook;
 
+    public int getUserId(){
+        return userId;
+    }
+    public void setUserId(int userId){
+        this.userId = userId;
+    }
+    public Roles getRoleId(){
+        return role;
+    }
+    public void setRole(Roles role){
+        this.role = role;
+    }
+    public String getUsername(){
+        return username;
+    }
+    public void setUsername(String username){
+        this.username = username;
+    }
+    public String getFirstName(){
+        return firstName;
+    }
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+    public String getLastName(){
+        return lastName;
+    }
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+    public String getGender(){
+        return gender;
+    }
+    public void setGender(String gender){
+        this.gender = gender;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public void setEmail(String email){
+        this.email = email;
+    }
+    public String getAlternateEmail(){
+        return alternateEmail;
+    }
+    public void setAlternateEmail(String alternateEmail){
+        this.alternateEmail = alternateEmail;
+    }
+    public String getPasswordHash(){
+        return passwordHash;
+    }
+    public void setPasswordHash(String passwordHash){
+        this.passwordHash = passwordHash;
+    }
+    public String getPhoneNumber(){
+        return phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber){
+        this.phoneNumber = phoneNumber;
+    }
+    public String getAadharNumber(){
+        return aadharNumber;
+    }
+    public void setAadharNumber(String aadharNumber){
+        this.aadharNumber = aadharNumber;
+    }
+    public String getCity(){
+        return city;
+    }
+    public void setCity(String city){
+        this.city = city;
+    }
+    public String getState(){
+        return state;
+    }
+    public void setState(String state){
+        this.state = state;
+    }
+    public String getCountry(){
+        return country;
+    }
+    public void setCountry(String country){
+        this.country = country;
+    }
+    public String getPincode(){
+        return pincode;
+    }
+    public void setPincode(String pincode){
+        this.pincode = pincode;
+    }
+    public LocalDate getDateOfBirth(){
+        return dateOfBirth;
+    }
+    public void setLocalDate(LocalDate dateOfBirth){
+        this.dateOfBirth = dateOfBirth;
+    }
+    public String getProfilePicture(){
+        return profilePicture;
+    }
+    public void setProfilePicture(String profilePicture){
+        this.profilePicture = profilePicture;
+    }
+    public LocalDateTime getLastLogin(){
+        return lastLogin;
+    }
+    public void setLastLogin(LocalDateTime lastLogin){
+        this.lastLogin = lastLogin;
+    }
+    public LocalDateTime getCreatedAt(){
+        return createdAt;
+    }
+    public void setCreatedAt(LocalDateTime createdAt){
+        this.createdAt = createdAt;
+    }
+    public LocalDateTime getUpdatedAt(){
+        return updatedAt;
+    }
+    public void setUpdatedAt(LocalDateTime updatedAt){
+        this.updatedAt = updatedAt;
+    }
+    public String getCollege(){
+        return college;
+    }
+    public void setCollege(String college){
+        this.college = college;
+    }
+    public String getBranch(){
+        return branch;
+    }
+    public void setBranch(String branch){
+        this.branch = branch;
+    }
+    public int getPassingYear(){
+        return passingYear;
+    }
+    public void setPassingYear(int passingYear){
+        this.passingYear = passingYear;
+    }
+    public String getMarksheet(){
+        return marksheet;
+    }
+    public void setMarksheet(String marksheet){
+        this.marksheet = marksheet;
+    }
+    public String getLinkedin(){
+        return linkedin;
+    }
+    public void setLinkedin(String linkedin){
+        this.linkedin = linkedin;
+    }
+    public String getInstagram(){
+        return instagram;
+    }
+    public void setInstagram(String instagram){
+        this.instagram = instagram;
+    }
+    public String getTwitter(){
+        return twitter;
+    }
+    public void setTwitter(String twitter){
+        this.twitter = twitter;
+    }
+    public String getFacebook(){
+        return facebook;
+    }
+    public void setFacebook(String facebook){
+        this.facebook = facebook;
+    }
 }

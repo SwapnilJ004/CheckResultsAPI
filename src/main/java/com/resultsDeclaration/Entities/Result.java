@@ -41,55 +41,42 @@ public class Result {
     public int getResultId() {
         return resultId;
     }
-
     public void setResultId(int resultId) {
         this.resultId = resultId;
     }
-
     public Election getElection() {
         return election;
     }
-
     public void setElection(Election election) {
         this.election = election;
     }
-
     public EpollUser getWinner() {
         return winner;
     }
-
     public void setWinner(EpollUser winner) {
         this.winner = winner;
     }
-
     public int getVoteCount() {
         return voteCount;
     }
-
     public void setVoteCount(int voteCount) {
         this.voteCount = voteCount;
     }
-
     public int getPercentage() {
         return percentage;
     }
-
     public void setPercentage(int percentage) {
         this.percentage = percentage;
     }
-
     public LocalDateTime getResultCreatedAt() {
         return resultCreatedAt;
     }
-
     public void setResultCreatedAt(LocalDateTime resultCreatedAt) {
         this.resultCreatedAt = resultCreatedAt;
     }
-
     public LocalDateTime getResultUpdatedAt() {
         return resultUpdatedAt;
     }
-
     public void setResultUpdatedAt(LocalDateTime resultUpdatedAt) {
         this.resultUpdatedAt = resultUpdatedAt;
     }

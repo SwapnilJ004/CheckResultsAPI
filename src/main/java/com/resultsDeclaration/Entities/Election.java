@@ -16,10 +16,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.Data;
 
 @Table(name = "elections")
-@Data
 @Entity
 public class Election {
 
@@ -51,6 +49,60 @@ public class Election {
 	@UpdateTimestamp
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
-	
+
+	public int getElectionId(){
+		return electionId;
+	}
+	public void setElectionId(int electionId){
+		this.electionId = electionId;
+	}
+	public String getTitle(){
+		return title;
+	}
+	public void setTitle(String title){
+		this.title = title;
+	}
+	public ElectionType getElectionType(){
+		return type;
+	}
+	public void setElectionType(ElectionType electionType){
+		this.type = electionType;
+	}
+	public LocalDateTime getStartDate(){
+		return startDate;
+	}
+	public void setStartDate(LocalDateTime startDate){
+		this.startDate = startDate;
+	}
+	public LocalDateTime getEndDate(){
+		return endDate;
+	}
+	public void setEndDate(LocalDateTime endDate){
+		this.endDate = endDate;
+	}
+	public EpollUser getCreatedBy(){
+		return createdBy;
+	}
+	public void setCreatedBy(EpollUser createdBy){
+		this.createdBy = createdBy;
+	}
+	public ElectionStatus getElectionStatus(){
+		return status;
+	}
+	public void setElectionStatus(ElectionStatus status){
+		this.status = status;
+	}
+	public LocalDateTime getCreatedAt(){
+		return createdAt;
+	}
+	public void setCreatedAt(LocalDateTime createdAt){
+		this.createdAt = createdAt;
+	}
+	public LocalDateTime getUpdatedAt(){
+		return updatedAt;
+	}
+	public void setUpdatedAt(LocalDateTime updatedAt){
+		this.updatedAt = updatedAt;
+	}
 }
 
