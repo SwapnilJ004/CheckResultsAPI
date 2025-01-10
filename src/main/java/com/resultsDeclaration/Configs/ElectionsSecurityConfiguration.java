@@ -37,11 +37,12 @@ public class ElectionsSecurityConfiguration {
 	SecurityFilterChain securityFilter(HttpSecurity http) throws Exception {
 		http.cors().and().authorizeHttpRequests((req) -> req
 
-				.requestMatchers("/results/**", "/swagger-ui.html", "/swagger-ui/**", "/swagger-ui/index.html", "/v3/api-docs/**").permitAll() // Allow
-				.anyRequest().authenticated())
-				.httpBasic(withDefaults())
-				.formLogin(withDefaults());
-		http.csrf(csrf -> csrf.disable());
+				// .requestMatchers("/results/**", "/swagger-ui.html", "/swagger-ui/**", "/swagger-ui/index.html", "/v3/api-docs/**").permitAll() // Allow
+				// .anyRequest().authenticated());
+				.anyRequest().permitAll());
+				// .httpBasic(withDefaults());
+				// .formLogin(withDefaults());
+		// http.csrf(csrf -> csrf.disable());
 
 		return http.build();
 	}

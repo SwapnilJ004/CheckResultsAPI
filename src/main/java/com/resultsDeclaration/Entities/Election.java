@@ -23,8 +23,8 @@ public class Election {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "election_id")
-	private Integer electionId;
+	@Column(name = "id")
+	private Integer id;
 	@Column(name = "title")
 	private String title;
 	
@@ -38,7 +38,7 @@ public class Election {
 	private LocalDateTime endDate;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false)
+	@JoinColumn(name = "created_by", referencedColumnName = "user_id", nullable = false)
 	private EpollUser createdBy;
 	@Column(name = "status")
 	private ElectionStatus status;
@@ -50,11 +50,11 @@ public class Election {
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
 
-	public int getElectionId(){
-		return electionId;
+	public int getId(){
+		return id;
 	}
-	public void setElectionId(int electionId){
-		this.electionId = electionId;
+	public void setId(int electionId){
+		this.id = electionId;
 	}
 	public String getTitle(){
 		return title;

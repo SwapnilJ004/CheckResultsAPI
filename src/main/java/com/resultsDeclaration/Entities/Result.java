@@ -16,7 +16,7 @@ public class Result {
     private int resultId;
 
     @OneToOne
-    @JoinColumn(name = "election_id", referencedColumnName = "election_id", nullable = false)
+    @JoinColumn(name = "election_id", referencedColumnName = "id", nullable = false)
     private Election election;
 
     @ManyToOne
