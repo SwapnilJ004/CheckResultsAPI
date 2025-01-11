@@ -43,6 +43,8 @@ public class ElectionResponse {
         this.positions = positions;
     }
 
-    // Getters and setters
+    public List<PositionResponse> getPositions() {
+        return positions;
+    }
 }
 

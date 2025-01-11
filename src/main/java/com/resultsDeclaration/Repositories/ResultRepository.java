@@ -5,8 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.resultsDeclaration.Entities.Result;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
-
 import java.util.List;
 
 @Repository

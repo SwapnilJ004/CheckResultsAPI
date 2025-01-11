@@ -27,5 +27,9 @@ public class PositionResponse {
         this.results = results;
     }
 
+    public List<ResultResponse> getResults() {
+        return results;
+    }
+
     // Getters and setters
 }
