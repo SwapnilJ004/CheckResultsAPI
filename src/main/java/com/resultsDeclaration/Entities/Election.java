@@ -6,6 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -37,29 +38,33 @@ public class Election {
 	@Column(name = "end_date")
 	private LocalDateTime endDate;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "created_by", referencedColumnName = "user_id", nullable = false)
 	private EpollUser createdBy;
 	@Column(name = "status")
+	@Convert(converter = ElectionStatusConverter.class)
 	private ElectionStatus status;
 	
 	@Column(name = "created_at")
 	@CreationTimestamp
 	private LocalDateTime createdAt;
+	
 	@UpdateTimestamp
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
 
-	public int getId(){
+	public Integer getElectionId(){
+		System.out.println("Get id");
 		return id;
 	}
-	public void setId(int electionId){
+	public void setId(Integer electionId){
+		System.out.println("Set id");
 		this.id = electionId;
 	}
-	public String getTitle(){
+	public String getElectionTitle(){
 		return title;
 	}
-	public void setTitle(String title){
+	public void setElectionTitle(String title){
 		this.title = title;
 	}
 	public ElectionType getElectionType(){

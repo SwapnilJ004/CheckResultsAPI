@@ -15,11 +15,11 @@ public class Result {
     @Column(name = "result_id")
     private int resultId;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "election_id", referencedColumnName = "id", nullable = false)
     private Election election;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "winner_id", referencedColumnName = "user_id", nullable = false)
     private EpollUser winner;
 
